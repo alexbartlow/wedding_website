@@ -1,17 +1,43 @@
 .container#hero
   h1.center
     span.pink
-      'HANNAH
+      'HANNAH REEVES 
     span.small
       ' and
-    span.green ALEX
+    span.green ALEX BARTLOW
   h2.center ARE GETTING MARRIED
 
 .container
   .row
     .span4
-      .clipmid
-        img(src="/images/calendar.png")
+      table
+        thead
+          tr
+            td(colspan=7)
+              h2.center.green FEBRUARY 2013
+        tbody
+          tr
+            - %w{S M T W R F S}.each do |day|
+              td=day
+          tr
+            td(colspan=5)
+            td 1
+            td 2
+          tr
+            - (3..9).each do |day|
+              td=day
+          tr
+            - (10..16).each do |day|
+              td=day
+          tr
+            - (17..22).each do |day|
+              td=day
+            td.thedate
+              .datecircle 23
+          tr
+            - (24..28).each do |day|
+              td=day
+            td(colspan=2)
       h5.center February 23, 2013
     .span4
       .center-circle
@@ -21,4 +47,19 @@
         .clipmid
           img(src="/images/location.png")
         h5.center
-            | 1934 N 4th St, Columbus OH 43202
+          | 1934 N 4th St, Columbus OH 43202
+  .row
+    .span6.rightalign
+      h2 THE HAPPY COUPLE IS REGISTERED AT TARGET
+    .span6
+      h4
+        a(href="http://www.target.com/wedd/registry/5zKEnZOHgj20MCLWx0Pubw" target="_blank")
+          | http://www.target.com/wedd/registry/5zKEnZOHgj20MCLWx0Pubw
+  .row
+    .span6.rightalign
+      h2 PLEASE RSVP VIA FACEBOOK
+    .span6
+      h4
+        a(href="https://www.facebook.com/events/199496966853163/" target="_blank")
+          | https://www.facebook.com/events/199496966853163/
+

@@ -36,14 +36,41 @@ body > .container {
   background-color: rgba(255, 255, 255, 0.9); }
 
 #hero {
-  margin-top: 100px; }
+  padding-top: 40px; }
   #hero h1, #hero h2 {
     font-weight: light; }
-  #hero h1 {
-    font-size: 78pt; }
-  #hero h2 {
-    font-size: 56pt; }
 
 h1, h2, h3 {
   font-family: "Dorsa", sans;
   font-weight: lighter; }
+
+h1 {
+  font-size: 78pt; }
+
+h2 {
+  font-size: 56pt; }
+
+a {
+  text-decoration: underline !important; }
+
+.row {
+  padding-top: 40px; }
+
+.rightalign {
+  text-align: right; }
+
+table {
+  width: 100%; }
+  table td {
+    font-family: "Dorsa", sans;
+    font-size: 28pt;
+    color: #5c7858;
+    width: 14.2%;
+    text-align: center; }
+    table td .datecircle {
+      margin: 0 auto 0 auto;
+      color: #e5ebe4;
+      width: 40px;
+      height: 40px;
+      border-radius: 300px;
+      background-color: #5c7858; }

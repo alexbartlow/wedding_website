@@ -11,17 +11,6 @@
   </head>
 
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a href="#" class="brand"><%= @title %></a>
-          <ul class="nav">
-            <%= li_link_to("Home", '/') %>
-            <%= li_link_to("Deck", '/deck') %>
-          </ul>
-        </div>
-      </div>
-    </div>
     <%= yield %>
   </body>
 </html>
