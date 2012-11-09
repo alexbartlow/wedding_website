@@ -2,7 +2,7 @@
   color: #5c7858; }
 
 .pink {
-  color: #eec5b3; }
+  color: #e5a589; }
 
 div.navbar + div {
   margin-top: 40px; }
@@ -14,7 +14,7 @@ div.navbar + div {
   height: 300px; }
 
 .center-circle {
-  background: rgba(238, 197, 179, 0.8);
+  background: rgba(238, 197, 179, 0.9);
   border-radius: 500px;
   height: 300px;
   width: 300px;
@@ -36,7 +36,7 @@ body > .container {
   background-color: rgba(255, 255, 255, 0.9); }
 
 #hero {
-  padding-top: 40px; }
+  padding-top: 140px; }
   #hero h1, #hero h2 {
     font-weight: light; }
 
