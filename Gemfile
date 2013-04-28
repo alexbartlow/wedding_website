@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'sinatra'
 gem 'coffee-script'
-gem 'therubyracer'
+gem 'therubyracer', :require => false
 gem 'thin'
 gem 'slim'
 gem 'sass'
