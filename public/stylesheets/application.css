@@ -56,8 +56,25 @@ a {
 .row {
   padding-top: 40px; }
 
+.bottom {
+  height: 60px; }
+
 .rightalign {
   text-align: right; }
+
+.spacer {
+  width: 1em;
+  display: inline-block; }
+
+.btn > input[type="radio"] {
+  display: none; }
+
+.btn-custom {
+  color: white !important;
+  text-shadow: 0 2px 5px rgba(2, 0, 0, 0.39); }
+
+form.form-inline fieldset {
+  padding-bottom: 10px; }
 
 table {
   width: 100%; }
@@ -74,3 +91,6 @@ table {
       height: 40px;
       border-radius: 300px;
       background-color: #5c7858; }
+
+.form-inline .input-medium {
+  height: 30px; }

@@ -48,11 +48,39 @@
       h4
         a(href="http://www.target.com/wedd/registry/5zKEnZOHgj20MCLWx0Pubw" target="_blank")
           | TARGET REGISTRY
-  .row
+  .row(ng-app="rsvp")
     .span6.rightalign
-      h2 PLEASE RSVP VIA FACEBOOK
-    .span6
-      h4
-        a(href="https://www.facebook.com/events/199496966853163/" target="_blank")
-          | FACEBOOK EVENT
+      h2 PLEASE RSVP HERE
+    .span6(ng-controller="RsvpControl")
+      div(ng-show="finished()")
+        .alert.alert-success(ng-show="accepted")
+          p Great! We'll see you at the wedding!
+        .alert.alert-warning(ng-show="rejected")
+          p So sorry to hear that! Thank you for your well-wishes!
+        p If you change your plans, you can RSVP again here
+      form.form-inline(ng-show="!finished()")
+        fieldset
+          .input-append
+            input#lastname.input-medium(type="text" placeholder="Your Last Name" ng-model="last_name")
+            button.btn(ng-click="submitclicked()") Search
+          .spacer
+          span(ng-show="loading")
+            |Loading...
+          span(ng-show="possible_rows.length")
+            select(ng-model="selected" ng-options="item.first_name for item in possible_rows")
+              option(value="") Which Household?
+        fieldset(ng-show="selected")
+          span Attending:
+          .spacer
+          .invitees.btn-group
+            label(ng-repeat="num in selected.invitees" class="btn" ng-class="{'btn-success': selected.attending==num}")
+              input(type="radio" value="{{num}}" name="invitees" ng-model="selected.attending")
+              | {{num}}
+              .spacer
+        fieldset
+          .buckles(ng-show="selected")
+            .btn.btn-large.btn-success(ng-click="accept()") Wouldn't Miss it for the World!
+            .spacer
+            .btn.btn-large.btn-custom(ng-click="reject()") Celebrating from Afar!
 
+  .row.bottom

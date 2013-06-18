@@ -11,4 +11,4 @@ guard 'livereload' do
 end
 
 guard 'sass', :input => 'sass', :output => "public/stylesheets"
-  
+guard 'coffeescript', :input => 'coffee', :output => "public/javascripts"
