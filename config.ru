@@ -38,6 +38,10 @@ class App < Sinatra::Base
     end
   end
 
+  get '/favicon.ico' do
+    not_found
+  end
+
   get '/last_name' do
     content_type :json
     ws = setup_ws
