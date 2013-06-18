@@ -2,7 +2,6 @@ require "rubygems"
 require "bundler/setup"
 require 'rack'
 require 'sinatra/base'
-require 'coffee-script'
 require 'slim'
 require 'json'
 require 'google_drive'
